@@ -1,0 +1,31 @@
+body:after{display:block; content:' ';background: url('../img/world.svg') center no-repeat; position: fixed; z-index:0; width: 100%; height: 100%; background-size:auto 60%; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.split {height: 100%;width: 50%;position: fixed; z-index: 1;top: 0; overflow-x: hidden; padding-top: 20px; }
+.left { left: 0; background-color: transparent; }
+.right { right: 0; background-color: rgba(0,0,0,0.03); }  
+.centered {position: absolute; top: 50%; width: 100%;}
+.centered img.logo {height: 150px; }
+.centered .banner { height: 400px; background-size: cover; background-repeat: no-repeat; width: 100%; background-color:rgba(0,0,0,0.5); margin-top: 30px;}
+.content {max-width: 460px; padding: 60px; box-sizing: border-box; display: inline-block; color:#5C5C5C; min-height: 280px;}
+.content h2{font-size: 20px; font-weight: bold; color:#000}
+.content .btn-primary{background: #F5C524; color:#ffffff; text-transform: uppercase; font-weight: bold; font-size: 15px; border:0; padding-left: 40px; padding-right: 40px;}
+.content .btn-primary:hover{background: #dbae19;}
+
+.left .centered{text-align:right; right: 0%; transform: translate(0%, -50%);}
+.left .centered img.logo{margin-right: 60px}
+.left .centered .banner{background-image: url('../img/telemedia-holding.jpg'); background-position:right;}
+.right .centered{text-align:left; left: 0%; transform: translate(0%, -50%);}
+.right .centered img.logo{margin-left: 60px}
+.right .centered .banner{background-image: url('../img/telemedia-callcenter'); background-position:left;}
+.right .centered .banner img{height: 100%; margin-left: 20%;}
+
+@media (max-width: 980px) {
+    body:after{background-position:top; background-size:cover; }
+    .split {width: 100%;position: relative; z-index: 1;top: 0; overflow-x: hidden; padding-top: 20px; }
+    .content{padding: 10%; min-height:auto}
+    .centered{position: relative; top:0;}
+    .centered img.logo{height: 100px; margin-left: 10%;}
+    .centered .banner { height: 250px;}
+    .left .centered{text-align:left; left: 0%; transform: translate(0%, 0%);}
+    .right .centered{text-align:left; left: 0%; transform: translate(0%, 0%);}
+    .right{background-color: rgba(0,0,0,0.07);}
+}
